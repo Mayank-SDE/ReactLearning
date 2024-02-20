@@ -35,3 +35,5 @@ data.acquisition = acquisationChannel;
 console.log(data);
 
 You can consider it for taking the form data.
+
+We can also use third party library ex- react-form-hook , formik docs
