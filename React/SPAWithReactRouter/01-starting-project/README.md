@@ -67,3 +67,25 @@ To switch to different component via route programmatically using the useNavigat
 
 -> const navigate = useNavigate();
 -> navigate("/path");
+
+
+passing dynamic values using the urls 'url/:firstDynamicValue/:SecondDynamicValue'
+
+now importing the {useParams} from the react-router-dom which is used for extracting values from the url.
+
+import {useParams} from 'react-router-dom';
+
+const params = useParams();
+
+console.log(params.firstDynamicValue);
+
+If you do not want to referesh your page on clicking some link use <Link> or <NavLink> instead of <a> tag.
+
+If you do not want to highlight the link on clicking and show it as active then use <Link> tag.
+
+If you want to highlight the link on clicking as an active then use <NavLink>.
+
+Any url starting with the '/' is the absolute path and any url not starting with the '/' is the relative path.
+
+
+
