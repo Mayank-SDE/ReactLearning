@@ -80,3 +80,31 @@ you can also use the useSubmit() hook from react-router-dom to submit trigger th
 You must always have server side validation as well because haing only client side validation is not enough because it may be disabled using the browser side dev tools.
 
 useActionData() returns the closest action function data.
+
+There is one more hook useFetcher() imported from react-router-dom , This hook when executed gives you an object and this object gives you bunch of properties and methods for example it gives you an Form component which is different from the other form component.
+
+It also gives you an submit function whihch is totally different from the useSubmit() hook.
+
+
+Unlike Form tag imported from react-router-dom fetcher.Form will trigger the action but not initialize the route transition.
+
+fetcher is basically used whenever you want to trigger the action  without route transition
+
+fetcher is used for triggering the action or loader without the help of navigation towards where the loader or action belongs.
+
+All we need to do is to provide the action attribute to the fetcher.Form element where you define the path of the component which contains the action function and that action function you want to trigger.
+
+We use fetcher.Form so that without rendering the component i.e no route transition is happening but still we were able to trigger the action or the loader function.
+
+You can also get the data return by the loader or the action function by directly accessing through the fetcher.data property.
+
+There are three state present inside the reac-router-dom which are stored inside the state propery and these are -
+1. submitting
+2. loading
+3. idle
+
+
+Deferring data fetching withb defer() - 
+
+It allows you to defer when data is loaded.
+
