@@ -235,3 +235,11 @@ After performing all the operations we must close the connection suing the clien
 client.close();
 
 And then at last using the response object we send the response.
+
+All the things imported whcih are used inside the getStaticPorps() or getServerSideProps() are not not included by next js on the client side bundle. Thus we can write the server side code directly inside the getStaticProps() or getServerSideProps() as it is not exposed to clients.
+
+Adding head meta data for search engine optimizations.
+
+import Head from the 'next/head'. It allows you to add the head element to the head section of your page component.
+
+Vercel is an great hosting provider for next js application.
