@@ -16,4 +16,11 @@
 
 -> getByText() will return an element and if it is not able to find the element then it will throw an error.
 
+-> screen.queryByText('text') returns null if the element is not found on the screen.
+
 3. expect() is also an globally available method where we can pass the element we are fetching using the screen. methods. The expect method further have the toBeInDocument() method which tells that the element is in the rendered component screen or not.
+
+4. import userEvent from '@testing-library/user-event';
+
+-> userEvent is an object that helps us trigger user's event in the virtual screen.
+-> userEvent.click() needs an one argument in which you want to simulate the click.

@@ -55,3 +55,39 @@ We always want to write our test using three A's -
 3. Assert - Compare execution result with the expected results.
 
 Inside the screen.getByText() we can pass the regular expression or normal string as well.
+
+The second argument inside the screen.getByText() we can pass the js object which have the exact property which is either true or false if it is false then the required string will get matched even if it is case insensitive and if it is an substring.
+
+We are not defining the secind argument {exact:false} then it will look for the exact match.
+
+We may have thousands of tests define in our application and to organize these test we may want of different test suites.
+
+For example all the testing related to one feature or one component can be grouped into one testing suites.
+
+You create the testing suite by using the global describe() function.
+
+When more than one component gets invloved then we call it as integrated testing.
+
+We can also test asynchronous code.
+
+Generally we do send request to real server in test. Because we only test code which we have wrote and hence we do not need to check whether the fetch api is able to send request properly or not instead we want to check wheter after recieving the data from server the component is able to render it or not properly.
+
+Thus we replace the fetch function with the mock function i.e dummy function whcih will accept the request and give the response.
+
+jest have built in support for mocking function.
+
+Inside our test function we will be overriding the
+
+window.fetch=jest.fn(); //The fetch function is overridden
+
+Now we will be setting the value of response resolved via calling mock function -
+
+window.fetch.mockResolvedValueOnce({
+json: async ()=>{
+return [Any value you want to return];
+}
+});
+
+so that we can create mock function.
+
+Read official documentation of jest and testing react library.
